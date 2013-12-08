@@ -5,23 +5,23 @@ import sys
 
 apt_pkg.init()
 
-cache = apt_pkg.GetCache()
-depcache = apt_pkg.GetDepCache(cache)
-depcache.Init()
-records = apt_pkg.GetPkgRecords(cache)
-srcrecords = apt_pkg.GetPkgSrcRecords()
+cache = apt_pkg.Cache()
+depcache = apt_pkg.DepCache(cache)
+depcache.init()
+records = apt_pkg.PackageRecords(cache)
+srcrecords = apt_pkg.SourceRecords()
 
 def get_source_pkg(pkg, records, depcache):
         """ get the source package name of a given package """
-        version = depcache.GetCandidateVer(pkg)
+        version = depcache.get_candidate_ver(pkg)
         if not version:
                 return None
-        file, index = version.FileList.pop(0)
-        records.Lookup((file, index))
-        if records.SourcePkg != "":
-                srcpkg = records.SourcePkg
+        file, index = version.file_list.pop(0)
+        records.lookup((file, index))
+        if records.source_pkg != "":
+                srcpkg = records.source_pkg
         else:
-                srcpkg = pkg.Name
+                srcpkg = pkg.name
         return srcpkg
 
 if len(sys.argv) > 1:
