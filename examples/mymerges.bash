@@ -18,8 +18,16 @@ cd $DIR
 mdt popcon > popcon_packages
 mdt bin2src < popcon_packages > popcon_sources
 
+# Create trees
+mdt dist-create sid http://ftp.debian.org/debian unstable main contrib
+mdt dist-create trusty http://archive.ubuntu.com/ubuntu trusty main restricted universe
+
+# Update trees
+mdt dist-apt-get sid update
+mdt dist-apt-get trusty update
+
 # Lists versions in Debian and Ubuntu
-mdt compare-versions sid edgy > du-versions
+mdt compare-versions sid trusty > du-versions
 
 # Get the bug list
 wget http://qa.debian.org/data/ddpo/results/bugs.txt
