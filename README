@@ -1,0 +1,26 @@
+MultiDistroTools
+================
+
+Most of the user documentation is on https://wiki.ubuntu.com/MultiDistroTools .
+The easiest way to learn how mdt is to use the inline help : just run
+"mdt" with any arguments.
+
+Developer documentation
+-----------------------
+debian/ contains the files needed to build the Debian package.
+scripts/ contains all the real scripts that do the real work.
+manpages/ contains the manpage's source and mdt.1.
+mdt is a ruby script that does the option parsing and calls the script
+   that does the real work.
+
+To write your own script:
+- add it in scripts/
+- export MDT_SCRIPTSDIR=scripts/
+- add it to mdt, in the COMMANDS array (should be easy to figure out)
+- run ./mdt yourcommand youroptions
+- debug ;)
+
+You can also run scripts/yourscript.ext directly.
+
+Doing PATH=$(pwd):$PATH will help if your script call other MultiDistroTools
+scripts.

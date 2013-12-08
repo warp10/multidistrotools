@@ -1,0 +1,2 @@
+mdt usr/bin
+scripts/* /usr/share/multidistrotools

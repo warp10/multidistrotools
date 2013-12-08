@@ -1,0 +1,98 @@
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.1//EN"
+	"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"
+	[
+	<!ENTITY program   "mdt">
+	<!ENTITY command   "<command>&program;</command>">
+	<!ENTITY firstname "Lucas">
+	<!ENTITY surname   "Nussbaum">
+	<!ENTITY address   "lucas@lucas-nussbaum.net">
+	]>
+<refentry>
+<refentryinfo>
+	<author>
+		<firstname>&firstname;</firstname>
+		<surname>&surname;</surname>
+	</author>
+	<address>&address;</address>
+	<copyright>
+		<year>2005</year>
+		<holder>&firstname; &surname;</holder>
+	</copyright>
+	<date>Nov 21, 2005</date>
+</refentryinfo>
+<refmeta>
+	<refentrytitle>&program;</refentrytitle>
+	<manvolnum>1</manvolnum>
+</refmeta>
+<refnamediv>
+	<refname>&program;</refname>
+	<refpurpose>Useful scripts for combining and comparing Debian derivatives</refpurpose>
+</refnamediv>
+<refsynopsisdiv>
+	<cmdsynopsis>
+		<command>mdt</command> [OPTIONS] [COMMAND]
+	</cmdsynopsis>
+</refsynopsisdiv>
+<refsect1>
+	<title>DESCRIPTION</title>
+
+	<para><command>mdt</command> is the entry point for MultiDistroTools (mdt
+	stands for MultiDistroTools). MultiDistroTools provides some useful scripts
+	allowing to generate and combine package lists and retrieve information from
+	them. It aims at automating all the tasks that most MOTUs, for example, have
+	to do on a regular basis.  </para>
+
+	<para>Run <command>mdt</command> without argument to get inline help.</para>
+
+<variablelist>
+	<varlistentry>
+		<term>
+			<option>-V</option></term><term><option>--version</option>
+		</term>
+		<listitem>
+			<para>Show version information.</para> 
+		</listitem>
+	</varlistentry>
+	<varlistentry>
+		<term>
+			<option>-v</option></term><term><option>--verbose</option>
+		</term>
+		<listitem>
+			<para>Run in verbose mode.</para> 
+		</listitem>
+	</varlistentry>
+	<varlistentry>
+		<term>
+			<option>-h</option></term><term><option>--help <replaceable>command</replaceable></option>
+		</term>
+		<listitem>
+			<para>Without argument, lists all available commands and
+			their summaries. With argument, shows some help for the given
+			command.</para> 
+		</listitem>
+	</varlistentry>
+</variablelist>
+</refsect1>
+<refsect1>
+	<title>SEE ALSO</title>
+
+	<para>Homepage : 
+	<ulink url="https://wiki.ubuntu.com/MultiDistroTools">https://wiki.ubuntu.com/MultiDistroTools</ulink></para>
+
+</refsect1>
+<refsect1>
+	<title>AUTHOR</title>
+	<para>Copyright (C) 2005 Lucas Nussbaum <email>lucas@lucas-nussbaum.net</email></para>
+
+	<para>This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by the
+	Free Software Foundation; either version 2 of the License, or (at your
+	option) any later version.</para>
+
+	<para>This program is distributed in the hope that it will be useful, but
+	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+	or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+	more details.</para>
+
+</refsect1>
+</refentry>

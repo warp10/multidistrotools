@@ -1,0 +1,17 @@
+Source: multidistrotools
+Section: utils
+Priority: optional
+Maintainer: Lucas Nussbaum <lucas@lucas-nussbaum.net>
+Build-Depends-Indep: debhelper (>= 4)
+Standards-Version: 3.7.2
+
+Package: multidistrotools
+Depends: ruby, apt-rdepends, rsync, python, python-apt, perl, grep-dctrl, libopenssl-ruby
+Architecture: all
+Description: Useful scripts for Debian derivatives developers
+ MultiDistroTools provides Debian derivatives developers with some useful
+ scripts allowing to generate and combine package lists and retrieve info
+ from them. It aims at automating all the tasks that most derivatives
+ developers have to do on a regular basis.
+ .
+ Homepage: https://wiki.ubuntu.com/MultiDistroTools

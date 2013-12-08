@@ -1,0 +1,71 @@
+multidistrotools (0.0.9) dapper; urgency=low
+
+  * added src2bin.
+  * made bin2src much faster.
+  * added dist-create, dist-apt-get, dist-apt-cache.
+  * changed compare-versions to use the APT trees.
+  * removed update.
+  * added an example script.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Wed, 14 Dec 2005 15:42:35 +0100
+
+multidistrotools (0.0.8) dapper; urgency=low
+
+  * apt-rdepends --follow is broken (see Debian bug #332311). Let's not use
+    --follow for now.
+  * versions2html.rb: added some useful links.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Mon, 28 Nov 2005 17:11:45 +0100
+
+multidistrotools (0.0.7) dapper; urgency=low
+
+  * Added a Recommends for rsync since mdt update uses it.
+  * Now outputs help to stderr.
+  * Avoid getting into a infinite loop if the command is unknown.
+  * Added compare-versions and versions2html.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Mon, 28 Nov 2005 11:23:58 +0100
+
+multidistrotools (0.0.6) dapper; urgency=low
+
+  * Really removed watch file. Bzr doesn't seem to remove files when you
+    bzr rm them...
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Sun, 27 Nov 2005 22:17:00 +0200
+
+multidistrotools (0.0.5) dapper; urgency=low
+
+  * Added some information in the README, to the inline help, and to the
+    manpage.
+  * Added some TODO lists in some scripts to help people what is still to
+    be done.
+  * Changed section from universe/utils to utils.
+  * Removed irrelevant watch file.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Sun, 27 Nov 2005 20:18:00 +0200
+
+multidistrotools (0.0.4) dapper; urgency=low
+
+  * Avoids including the .bzr directory in the build ... Documented on the
+    wiki to avoid future mistakes.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Wed, 23 Nov 2005 22:18:00 +0200
+
+multidistrotools (0.0.3) dapper; urgency=low
+
+  * Added a Recommends for apt-rdepends since it won't hurt.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Wed, 23 Nov 2005 22:00:19 +0200
+
+multidistrotools (0.0.2) dapper; urgency=low
+
+  * Now uploads to dapper instead to unstable.
+  * Section is now universe/utils instead of utils.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Wed, 23 Nov 2005 21:40:19 +0200
+
+multidistrotools (0.0.1) unstable; urgency=low
+
+  * First package.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Mon, 21 Nov 2005 20:20:19 +0200
