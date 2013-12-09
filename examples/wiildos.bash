@@ -21,8 +21,8 @@ if [ ! -d $HOME/.multidistrotools/trusty ]; then
 	mdt dist-create trusty http://archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
 fi
 
-#mdt dist-apt-get sid update
-#mdt dist-apt-get trusty update
+mdt dist-apt-get sid update
+mdt dist-apt-get trusty update
 
 # Get popcon results
 mdt popcon > popcon_packages
